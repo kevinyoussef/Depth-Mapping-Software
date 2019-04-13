@@ -15,7 +15,7 @@ All the above steps should be in one function called process_image()
 # TODO: Import OpenCV
 """import numpy as np"""
 import cv2
-
+import numpy as np
 # TODO: Edit this function
 def process_image():
 	image = cv2.imread('geisel.jpg', 0)
