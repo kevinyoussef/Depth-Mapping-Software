@@ -25,9 +25,11 @@ def process_image():
 	dim=half.shape
 	center= [dim[0]/2, dim[1]/2]
 	print(dim)
-	print(center)	
-	box = cv2.rectangle(half,(((center[1])-50),(center[0])-50),(50+(center[1]),(50+(center[0]))),(255,255,255),5) 
-	#box = cv2.rectangle(half,(67-5,),(5+(dim[1]),(5+(dim[0]))),(255,0,0),1)
+	print(center)
+	centerx = center[1]
+	centery = center[0]
+	box = cv2.rectangle(half,(((int(center[1]))-50),(int(center[0]))-50),(((50+int(center[1]))),(50+int(center[0]))),(255,255,255),5) 
+	#box = cv2.rectangle(half,((int(centerx)-50),(int(centery)-50)),(100,100),(255,0,0),1)
 	cv2.imwrite('gesielbox.jpg', box)
 	return
 
